@@ -1,0 +1,489 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1E8E99;
+			
+        }
+        .menu {
+            max-width: 800px;
+            margin-right: 5%;
+			margin-left:5%;
+			margin-top:5%;
+			margin-bottom:5%;
+		
+            padding: 20px;
+            background-color:#7ba9b6;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .menu h1 {
+            text-align: center;
+            color: white;
+			font-style:italic;
+        }
+		     .menu h4 {
+            text-align: center;
+            color: #c5bdca;
+			font-style:italic;
+        }
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+			
+        }
+        .tab-buttons button {
+            background-color: #c5bdca;
+			color: white;
+            border: none;
+            padding: 1% 2%;
+            cursor: pointer;
+            margin: 0 5px;
+            border-radius: 5px;
+			
+        }
+        .tab-buttons button.active {
+            background-color: #FB92B3 ;
+           
+        }
+        .category {
+            display: none;
+            margin-top: 20px;
+        }
+        .category h2 {
+            color: white;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .item {
+		
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+		.boldd{
+		font-weight: bold;
+		}
+        .item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+        .item h3 {
+            margin: 0;
+            color: white;
+        }
+        .item p {
+            margin: 0;
+            color:#c5bdca;
+        }
+		.images{
+		height:5px;
+		weight:5px;
+		}
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <h1>Our Items</h1>
+        <h4>I Know You Want It</h4>
+        
+	      <div class="tab-buttons">
+            <button onclick="showCategory('all')" class="Active">All Items</button>
+            <button onclick="showCategory('food')">Dessert</button>
+            <button onclick="showCategory('drinks')">Offers</button>
+             <button onclick="showCategory('desserts')">Mugs</button>
+          </div>
+
+     
+        <div id="all" class="category" style="display: block;">
+            <h2>All Items</h2>
+
+            
+             <div class="item">
+                <img class="images" src="images/od.jpeg" alt="Burger">
+                <div>
+                    <h3>Original Donut</h3>
+                    <p><span class = "boldd">price:</span>150,000 L.L | <span class = "boldd">Qty</span>:1</p>
+					<p><span class = "boldd">flavor choice:</span> Original</p>
+                </div>
+             </div>
+			
+             <div class="item">
+              	<img class="images" src="images/12.jpg" alt="Burger">
+                <div>
+                    <h3>Chocolate Donut</h3>
+                    <p><span class = "boldd">price:</span>150,000 L.L | <span class = "boldd">Qty</span>:1</p>
+					<p><span class = "boldd">flavor choice:</span> Chocolate</p>
+                </div>
+             </div>
+			 
+			 <div class="item">
+              	<img class="images" src="images/sac.jpeg" alt="Burger">
+                <div>
+                    <h3>Sablé Au Confiture</h3>
+                    <p><span class = "boldd">price:</span>150,000 L.L | <span class = "boldd">Qty</span>:1</p>
+					<p><span class = "boldd">price:</span>8$ | <span class = "boldd">One Box</span>:6 pieces</p>	
+                </div>
+             </div>
+          
+		     <div class="item">
+              	<img class="images" src="images/2.jpeg" alt="Burger">
+                <div>
+                    <h3>Sablé Au Nutella</h3>
+                    <p><span class = "boldd">price:</span>150,000 L.L | <span class = "boldd">Qty</span>:1</p>
+					<p><span class = "boldd">price:</span>8$ | <span class = "boldd">One Box</span>:6 pieces</p>				
+                </div>
+             </div>
+       
+		
+		     <div class="item">
+              	<img class="images" src="images/Z.jpeg" alt="Burger">
+                <div>
+                    <h3>Sablé</h3>
+                    <p><span class = "boldd">price:</span>4$ | <span class = "boldd">Qty</span>:1 Mini Bag</p>
+					<p><span class = "boldd">price:</span>7$ | <span class = "boldd"> 1/2 kilo</span></p>
+					<p><span class = "boldd">price:</span>14$ | <span class = "boldd"> 1 kilo</span></p>
+                </div>
+              </div>
+			  
+              <div class="item">
+                <img class="images" src="images/15$MUG.jpeg" alt="Burger">
+                <div>
+                    <h3>Mug</h3>
+                    <p><span class = "boldd">price:</span>15 $ | <span class = "boldd">Qty</span>:1</p>
+					<p><span class = "boldd">Contain:</span> Bombs Ball And Cookies</p>
+                </div>
+             </div>
+			 
+             <div class="item">
+                <img class="images" src="images/5.jpeg" alt="Burger">
+                <div>
+                    <h3>Special Mug</h3>
+                    <p><span class = "boldd">price:</span>20 $ | <span class = "boldd">Qty</span>:1</p>
+					<p><span class = "boldd">Contain:</span> Bombs Ball And Cookies</p>
+                </div>
+             </div>
+			
+   			 <div class="item">
+                <img class="images" src="images/6.jpeg" alt="Burger">
+                <div>
+                    <h3>Brownies</h3>
+                    <p><span class = "boldd">price:</span>150,000 L.L | <span class = "boldd">Qty</span>:1</p>
+                </div>	
+             </div>
+			 
+			 <div class="item">
+                <img class="images" src="images/1.jpeg" alt="Burger">
+                <div>
+                    <h3>Boule Au Chocolat</h3>
+                    <p><span class = "boldd">price:</span>8$ | <span class = "boldd">One Box</span> :8 pieces</p>
+					<p><span class = "boldd">Cover Choice:</span> Milk Or White Chocolate </p>
+                </div>
+             </div>
+			 
+			 <div class="item">
+                <img class="images" src="images/bb.jpeg" alt="Burger">
+                <div>
+                    <h3>Boule Bounty</h3>
+                    <p><span class = "boldd">price:</span>8$ | <span class = "boldd">One Box</span> :8 pieces</p>
+					<p><span class = "boldd">Cover Choice:</span> Milk Or White Chocolate </p>
+                </div>		
+             </div>
+			
+			 <div class="item">
+                <video width="80px" height="100px" autoplay muted controls style="margin-right: 15px;">
+                 <source src="images/kidsbox.mp4" type="video/mp4">
+                </video>
+                <div>
+                    <h3>Kids Box</h3>
+                    <p><span class = "boldd">price:</span>15$ | <span class = "boldd">Qty</span>:1</p>	
+                </div>
+             </div>
+			 
+			 <div class="item">
+                <video width="80px" height="100px" autoplay muted controls style="margin-right: 15px;">
+                 <source src="images/housebox.mp4" type="video/mp4">
+                </video>
+                <div>
+                    <h3>House Kids Box</h3>
+                    <p><span class = "boldd">price:</span> 20$ | <span class = "boldd">Qty</span>:1</p>	
+                </div>
+            </div>
+			    
+			 <div class="item">
+                <img class="images" src="images/4.jpeg" alt="Burger">
+                <div>
+                    <h3>Flavor Box</h3>
+                    <p><span class = "boldd">price:</span> 15 $ | <span class = "boldd">Qty</span>:1</p>	
+                </div>
+			 </div>
+				
+			  <div class="item">
+                <img class="images" src="images/sfb.jpeg" alt="Burger">
+                <div>
+                    <h3>Special Flavor Box</h3>
+                    <p><span class = "boldd">price:</span> 15 $ | <span class = "boldd">Qty</span>:1</p>	
+                </div>
+			  </div>	
+				
+			 <div class="item">
+                <img class="images" src="images/7.jpeg" alt="Burger">
+                <div>
+                    <h3>Oreo Chocolate Bag</h3>
+                    <p><span class = "boldd">price:</span> 4 $ | <span class = "boldd">Qty</span>:6</p>					
+                </div>
+			 </div>
+			 
+			 <div class="item">
+                <img class="images" src="images/odwc.jpeg" alt="Burger">
+                <div>
+                    <h3>Oreo Dipped With Chocolate</h3>
+                    <p><span class = "boldd">price:</span> 7 $ | <span class = "boldd">Qty</span>:12</p>					
+                </div>
+			 </div>
+			 
+			 <div class="item">
+                <img class="images" src="images/tcb.jpeg" alt="Burger">
+                <div>
+                    <h3>Tuc Chocolate Bag</h3>
+                    <p><span class = "boldd">price:</span> 4 $ | <span class = "boldd">Qty</span>:6</p>					
+                </div>
+             </div>
+					
+			 <div class="item">
+                <img class="images" src="images/bball.jpeg" alt="Burger">
+                <div>
+                    <h3>Bomb Ball</h3>
+                    <p><span class = "boldd">price:</span> 2 $ | <span class = "boldd">Qty</span>:1</p>		
+                </div>
+             </div>
+			
+			 <div class="item">
+                <img class="images" src="images/cj.jpeg" alt="Burger">
+                <div>
+                    <h3>Cookie Jar</h3>
+                    <p><span class = "boldd">price:</span> 20 $ | <span class = "boldd">Size </span>:L</p>
+					 <p><span class = "boldd">price:</span> 25 $ | <span class = "boldd">Size</span>:S</p>
+                </div>
+             </div>
+		</div>	 
+		 
+        <!-- Food Category -->
+        <div id="food" class="category">
+		<h2>dessert</h2>
+          <div class="item">
+                <img class="images" src="images/od.jpeg" alt="Burger">
+                <div>
+                    <h3>Original Donut</h3>
+                    <p><span class = "boldd">price:</span>150,000 L.L | <span class = "boldd">Qty</span>:1</p>
+					<p><span class = "boldd">flavor choice:</span> Original</p>
+                </div>
+             </div>
+			
+             <div class="item">
+              	<img class="images" src="images/12.jpg" alt="Burger">
+                <div>
+                    <h3>Chocolate Donut</h3>
+                    <p><span class = "boldd">price:</span>150,000 L.L | <span class = "boldd">Qty</span>:1</p>
+					<p><span class = "boldd">flavor choice:</span> Chocolate</p>
+                </div>
+             </div>
+			 
+			 <div class="item">
+              	<img class="images" src="images/sac.jpeg" alt="Burger">
+                <div>
+                    <h3>Sablé Au Confiture</h3>
+                    <p><span class = "boldd">price:</span>150,000 L.L | <span class = "boldd">Qty</span>:1</p>
+					<p><span class = "boldd">price:</span>8$ | <span class = "boldd">One Box</span>:6 pieces</p>	
+                </div>
+             </div>
+          
+		     <div class="item">
+              	<img class="images" src="images/2.jpeg" alt="Burger">
+                <div>
+                    <h3>Sablé Au Nutella</h3>
+                    <p><span class = "boldd">price:</span>150,000 L.L | <span class = "boldd">Qty</span>:1</p>
+					<p><span class = "boldd">price:</span>8$ | <span class = "boldd">One Box</span>:6 pieces</p>				
+                </div>
+             </div>
+       
+		
+		     <div class="item">
+              	<img class="images" src="images/Z.jpeg" alt="Burger">
+                <div>
+                    <h3>Sablé</h3>
+                    <p><span class = "boldd">price:</span>4$ | <span class = "boldd">Qty</span>:1 Mini Bag</p>
+					<p><span class = "boldd">price:</span>7$ | <span class = "boldd"> 1/2 kilo</span></p>
+					<p><span class = "boldd">price:</span>14$ | <span class = "boldd"> 1 kilo</span></p>
+                </div>
+              </div>
+			  
+        
+   			 <div class="item">
+                <img class="images" src="images/6.jpeg" alt="Burger">
+                <div>
+                    <h3>Brownies</h3>
+                    <p><span class = "boldd">price:</span>150,000 L.L | <span class = "boldd">Qty</span>:1</p>
+                </div>	
+             </div>
+			 
+			 <div class="item">
+                <img class="images" src="images/1.jpeg" alt="Burger">
+                <div>
+                    <h3>Boule Au Chocolat</h3>
+                    <p><span class = "boldd">price:</span>8$ | <span class = "boldd">One Box</span> :8 pieces</p>
+					<p><span class = "boldd">Cover Choice:</span> Milk Or White Chocolate </p>
+                </div>
+             </div>
+			 
+			 <div class="item">
+                <img class="images" src="images/bb.jpeg" alt="Burger">
+                <div>
+                    <h3>Boule Bounty</h3>
+                    <p><span class = "boldd">price:</span>8$ | <span class = "boldd">One Box</span> :8 pieces</p>
+					<p><span class = "boldd">Cover Choice:</span> Milk Or White Chocolate </p>
+                </div>		
+             </div>
+			
+			
+				
+			<div class="item">
+                <img class="images" src="images/7.jpeg" alt="Burger">
+                <div>
+                    <h3>Oreo Chocolate Bag</h3>
+                    <p><span class = "boldd">price:</span> 4 $ | <span class = "boldd">Qty</span>:6</p>					
+                </div>
+			 </div>
+			 
+			 <div class="item">
+                <img class="images" src="images/odwc.jpeg" alt="Burger">
+                <div>
+                    <h3>Oreo Dipped With Chocolate</h3>
+                    <p><span class = "boldd">price:</span> 7 $ | <span class = "boldd">Qty</span>:12</p>					
+                </div>
+			 </div>
+			 
+			 <div class="item">
+                <img class="images" src="images/tcb.jpeg" alt="Burger">
+                <div>
+                    <h3>Tuc Chocolate Bag</h3>
+                    <p><span class = "boldd">price:</span> 4 $ | <span class = "boldd">Qty</span>:6</p>					
+                </div>
+             </div>
+					
+			 <div class="item">
+                <img class="images" src="images/bball.jpeg" alt="Burger">
+                <div>
+                    <h3>Bomb Ball</h3>
+                    <p><span class = "boldd">price:</span> 2 $ | <span class = "boldd">Qty</span>:1</p>		
+                </div>
+             </div>
+        </div>
+
+        <!-- Drinks Category -->
+        <div id="drinks" class="category">
+            <h2>Offers</h2>
+     <div class="item">
+                <video width="80px" height="100px" autoplay muted controls>
+                 <source src="images/kidsbox.mp4" type="video/mp4">
+                </video>
+                <div>
+                    <h3>Kids Box</h3>
+                    <p><span class = "boldd">price:</span>15$ | <span class = "boldd">Qty</span>:1</p>	
+                </div>
+             </div>
+			 
+			 <div class="item">
+                <video width="80px" height="100px" autoplay muted controls>
+                 <source src="images/housebox.mp4" type="video/mp4">
+                </video>
+                <div>
+                    <h3>House Kids Box</h3>
+                    <p><span class = "boldd">price:</span> 20$ | <span class = "boldd">Qty</span>:1</p>	
+                </div>
+            </div>
+			    
+			 <div class="item">
+                <img class="images" src="images/4.jpeg" alt="Burger">
+                <div>
+                    <h3>Flavor Box</h3>
+                    <p><span class = "boldd">price:</span> 15 $ | <span class = "boldd">Qty</span>:1</p>	
+                </div>
+			 </div>
+				
+			  <div class="item">
+                <img class="images" src="images/sfb.jpeg" alt="Burger">
+                <div>
+                    <h3>Special Flavor Box</h3>
+                    <p><span class = "boldd">price:</span> 15 $ | <span class = "boldd">Qty</span>:1</p>	
+                </div>
+			  </div>
+             	 <div class="item">
+                <img class="images" src="images/bball.jpeg" alt="Burger">
+                <div>
+                    <h3>Bomb Ball</h3>
+                    <p><span class = "boldd">price:</span> 2 $ | <span class = "boldd">Qty</span>:1</p>		
+                </div>
+             </div>
+			
+			 <div class="item">
+                <img class="images" src="images/cj.jpeg" alt="Burger">
+                <div>
+                    <h3>Cookie Jar</h3>
+                    <p><span class = "boldd">price:</span> 20 $ | <span class = "boldd">Size </span>:L</p>
+					 <p><span class = "boldd">price:</span> 25 $ | <span class = "boldd">Size</span>:S</p>
+                </div>
+             </div>			  
+        </div>
+
+        <!-- Desserts Category -->
+        <div id="desserts" class="category">
+            <h2>Mugs</h2>
+            <div class="item">
+                <img class="images" src="images/15$MUG.jpeg" alt="Burger">
+                <div>
+                    <h3>Mug</h3>
+                    <p><span class = "boldd">price:</span>15 $ | <span class = "boldd">Qty</span>:1</p>
+					<p><span class = "boldd">Contain:</span> Bombs Ball And Cookies</p>
+                </div>
+             </div>
+			 
+             <div class="item">
+                <img class="images" src="images/5.jpeg" alt="Burger">
+                <div>
+                    <h3>Special Mug</h3>
+                    <p><span class = "boldd">price:</span>20 $ | <span class = "boldd">Qty</span>:1</p>
+					<p><span class = "boldd">Contain:</span> Bombs Ball And Cookies</p>
+                </div>
+             </div>
+			
+		
+    </div>
+
+    <script>
+        function showCategory(category) {
+            // Hide all categories
+            const categories = document.querySelectorAll('.category');
+            categories.forEach(cat => cat.style.display = 'none');
+            
+            // Remove 'active' class from all buttons
+            const buttons = document.querySelectorAll('.tab-buttons button');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            // Show the selected category and make button active
+            document.getElementById(category).style.display = 'block';
+            document.querySelector(`button[onclick="showCategory('${category}')"]`).classList.add('active');
+        }
+    </script>
+
+
+</body></html>

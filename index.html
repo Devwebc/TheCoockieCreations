@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cookie Creations</title>
+	
+    <style>
+	 
+	 
+	 body{text-align: center;
+	   background-color : #1E8E99;
+	    max-height: 100%;
+	
+	  
+	   }
+	   
+	   .logo{
+	   width: 10%;
+      height: 8%;
+	
+	
+      margin-right: 100%;
+	  
+	   
+	   }
+	   
+	   .images{
+	  width: auto;
+	   max-width: 100%;
+      height:400px ;
+	  border-radius: 30px;
+	   
+	   
+	   }
+	   
+	   .slideshow-container {
+           
+           
+            border-radius: 12px;
+			
+           
+        }
+        .slide {
+		    
+			
+            display: none;
+            animation: fade 1s ease-in-out;
+        }
+       
+        /* Smooth fading effect */
+        @keyframes fade {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
+        }
+        /* Dots */
+        .dots-container {
+            text-align: center;
+            padding: 15px 0;
+        }
+        .dot {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 8px;
+            background-color: #ddd;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.4s;
+        }
+        .dot.active {
+            background-color: #1e90ff;
+            box-shadow: 0 0 5px #1e90ff;
+        }
+    
+	         .menu-button {
+            display: block;
+            text-align: center;
+            margin: 30px auto;
+            padding: 15px 40px;
+            background-color: #008B8B;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 30px;
+            width: fit-content;
+           
+        }
+	
+	</style>
+</head>
+<body>
+ 
+	<img src="images/christmaslogo.png" class="logo">
+
+
+    <div class="header">
+        <h1 style="color:white;">The Cookie Creations</h1>
+        <p style="color:white; font-style:italic;">LOVE AT FIRST BITE</p>
+    </div>
+
+    <!-- Slideshow Container -->
+   <div class="slideshow-container">
+        <div class="slide">
+            <img src="images/12.jpg" alt="Fresh Cookies" class="images">
+        </div>
+        <div class="slide">
+            <img src="images/6.jpeg" alt="Cupcakes"class="images">
+        </div>
+        <div class="slide">
+            <img src="images/Z.jpeg" alt="Ice Cream"class="images">
+        </div>
+        <div class="slide">
+            <img src="images/7.jpeg" alt="Assorted Pies"class="images">
+        </div>
+    </div>
+
+    <!-- Dots -->
+    <div class="dots-container">
+        <span class="dot" ></span>
+        <span class="dot" ></span>
+        <span class="dot" ></span>
+        <span class="dot" ></span>
+    </div>
+
+    <!-- Menu Button -->
+    <a href="MenuPage.html" class="menu-button">Explore Our Menu</a>
+    
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.querySelectorAll(".slide");
+            let dots = document.querySelectorAll(".dot");
+            
+            slides.forEach(slide => slide.style.display = "none");
+            dots.forEach(dot => dot.classList.remove("active"));
+            
+            slideIndex++;
+            if (slideIndex > slides.length) slideIndex = 1;
+            
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].classList.add("active");
+            
+            setTimeout(showSlides, 2000);
+        }
+
+        function currentSlide(n) {
+            slideIndex = n - 1;
+            showSlides();
+        }
+    </script>
+</body>
+</html>
